@@ -1,0 +1,50 @@
+# Laravel standard
+/vendor
+/node_modules
+
+# Environment
+/.env
+.env.*.backup
+
+# Laravel & runtime
+/public/hot
+/public/storage
+/storage/*.key
+/storage/*.sqlite
+/storage/*.sqlite3
+
+# Logs and compiled files
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# IDEs and editors
+/.vscode/
+/.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# NPM / Yarn debug logs
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+
+# PHPUnit cache
+.phpunit.result.cache
+
+# Build output (Laravel Mix)
+public/mix-manifest.json
+public/css/*.css
+public/js/*.js
+public/css/*.map
+public/js/*.map
+
+# Other
+Homestead.json
+Homestead.yaml
+.env.backup
