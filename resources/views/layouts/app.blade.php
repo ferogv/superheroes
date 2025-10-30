@@ -15,13 +15,6 @@
   </button>
 
   <div class="collapse navbar-collapse" id="mainNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link btn btn-success text-white ml-2" href="{{ route('superheroes.create') }}">
-          <i class="fas fa-plus"></i> Add
-        </a>
-      </li>
-    </ul>
     <span class="navbar-text text-muted">Total: {{ \App\Superhero::count() }}</span>
   </div>
 </nav>

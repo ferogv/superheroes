@@ -2,29 +2,42 @@
 
 @section('content')
 <h1>Add Superhero</h1>
+
 @if ($errors->any())
   <div class="alert alert-danger">
     <ul>@foreach ($errors->all() as $err)<li>{{ $err }}</li>@endforeach</ul>
   </div>
 @endif
-<form action="{{ route('superheroes.store') }}" method="POST">
+
+<form action="{{ route('superheroes.store') }}" method="POST" enctype="multipart/form-data">
   @csrf
+
   <div class="form-group">
     <label>Real Name</label>
     <input type="text" name="real_name" class="form-control" value="{{ old('real_name') }}" required>
   </div>
+
   <div class="form-group">
     <label>Hero Name</label>
     <input type="text" name="hero_name" class="form-control" value="{{ old('hero_name') }}" required>
   </div>
+
   <div class="form-group">
-    <label>Photo URL</label>
+    <label>Upload Photo (preferred)</label>
+    <input type="file" name="photo" accept="image/*" class="form-control">
+    <small class="form-text text-muted">Or provide an external URL below.</small>
+  </div>
+
+  <div class="form-group">
+    <label>Photo URL (optional)</label>
     <input type="url" name="photo_url" class="form-control" value="{{ old('photo_url') }}">
   </div>
+
   <div class="form-group">
     <label>Additional Info</label>
     <textarea name="description" class="form-control">{{ old('description') }}</textarea>
   </div>
+
   <button class="btn btn-primary" type="submit">Save</button>
   <a class="btn btn-secondary" href="{{ route('superheroes.index') }}">Cancel</a>
 </form>
