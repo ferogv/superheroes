@@ -58,7 +58,6 @@ php artisan migrate
 ```bash
 php artisan migrate
 ```
-(If you previously ran migrations before Activity 10, ensure you have the migration that adds `picture` and `deleted_at`.)
 
 4. Create public storage symlink
 ```bash
